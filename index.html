@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--
+  ============================================================================
+  YOUR PROFILE HOME PAGE
+  ============================================================================
+
+  This file lives at:   public_html/index.html
+  It is your website's home page:  https://YOURUSERNAME.gblearn.com/
+
+  Your professor visits this page to find your name, your student ID, and the
+  link to your course folder. Keep it accurate all semester.
+
+  ============================================================================
+  THE WORKING CYCLE — you will repeat this all term
+  ============================================================================
+   1. DOWNLOAD  this file from your hosting account to your computer
+   2. EDIT      it in your text editor and save
+   3. UPLOAD    it back to public_html/ (File Manager or FileZilla)
+   4. VERIFY    open https://YOURUSERNAME.gblearn.com/ in your browser
+   5. If nothing changed — HARD REFRESH (Ctrl+F5 / Cmd+Shift+R)
+
+  Editing the file on your computer does NOT change your website.
+  Only uploading does.
+
+  ============================================================================
+  YOUR CHECKLIST — search for the word TODO to find each one
+  ============================================================================
+   [ ] Page title            [ ] Student ID
+   [ ] First and last name   [ ] E-mail address
+   [ ] Your photo            [ ] Short bio (2-3 sentences, your own words)
+   [ ] Photo alt text        [ ] Social links (optional — delete any you don't use)
+   [ ] Career / program      [ ] Last updated date
+   [ ] Colour skin           [ ] Course folder link
+   [ ] Validation script
+
+  ============================================================================
+  ABOUT YOUR PHOTO — read this, it catches almost everyone
+  ============================================================================
+  Put your photo in:  assets/img/
+  Then update the src below to match your file name EXACTLY.
+
+  Your hosting server is Linux. On Linux, MyPicture.JPG and mypicture.jpg are
+  two different file names. Windows treats them as the same name.
+
+  So the rule is: the src below must match the file name EXACTLY.
+
+      file on the server        src in this page        result
+      -----------------------   ---------------------   ----------------------
+      mypicture.jpg             mypicture.jpg           the photo appears
+      mypicture.jpg             MyPicture.JPG           the server returns a
+                                                        404 error (not found)
+      MyPicture.JPG             MyPicture.JPG           the photo appears
+
+  Uppercase is not broken. A mismatch is. Because the mismatch is easy to make
+  and hard to see, this course uses lowercase file names with no spaces, so
+  there is only ever one spelling to remember.
+  ============================================================================
+	-->
+
+	<!-- TODO: replace with "Firstname Lastname — YourCourseCode" -->
+	<title>"Liban Omar - COMP 1234"</title>
+
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/keyframes.css">
+
+	<!--
+	  TODO: pick your colour.
+	  The line below decides the colour scheme of the whole page. Change
+	  light-blue to any one of these, then save and reload:
+
+	      green      blue      light-blue      brown      pink
+
+	  Only the file name changes. Spell it exactly as shown, all lowercase,
+	  or the page will lose its colour entirely.
+	-->
+	<link rel="stylesheet" href="assets/css/skins/green.css" id="skin">
+
+	<!-- Icons. Font Awesome 6 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<section class="profile-box">
+	<div class="profile clearfix">
+
+		<div class="picture">
+			<!--
+			  TODO: your photo.
+			  Portrait orientation, at least 325 x 400 pixels.
+			  Save it into assets/img/ and match the file name below exactly.
+			  TODO: change the alt text to your own name.
+			-->
+			<img src="assets/img/mypicture.jpg" alt="Liban Omar" id="profile-photo">
+
+			<!-- TODO: your 9-digit student ID -->
+			<div class="student_id" id="student-id">
+				101667045
+			</div>
+		</div>
+
+		<div class="details">
+			<div class="profile-info">
+				<div class="profile-preword move-right-back"><span>Hello</span></div>
+
+				<!-- TODO: your first and last name -->
+				<h1 class="profile-title">
+					<span>I'm</span>
+					<span class="first-name">Liban</span>
+					<span class="last-name">Omar</span>
+				</h1>
+
+				<!-- TODO: your program, or the career you're aiming for -->
+				<h2 class="profile-position">
+					Computer Programming with a goal to be a Data Analyst
+				</h2>
+			</div>
+
+			<ul class="profile-list">
+
+				<li>
+					<strong class="title">Course Folder</strong>
+					<span class="cont">
+						<!--
+						  TODO: this is the link your professor uses to reach your work.
+						  Change the href from #URL to your course folder, followed by a
+						  slash. Your professor will tell you the folder name.
+						  Remove the # symbol, or the link will not work.
+
+						  Change the link text from CourseCODE to your course code.
+						  It is a document-relative path: this file sits in public_html/,
+						  and your course folder sits inside public_html/ beside it.
+						-->
+						<a href="comp1234/" id="course-link">COMP1234</a>
+					</span>
+				</li>
+
+				<li>
+					<strong class="title">E-mail</strong>
+					<span class="cont">
+						<!-- TODO: your college e-mail. Change it in BOTH places. -->
+						<a href="Liban.Omar@georgebrown.ca">Liban.Omar@georgebrown.ca</a>
+					</span>
+				</li>
+
+				<li>
+					<strong class="title">Bio</strong>
+					<span class="cont" id="bio">
+						<!--
+						  TODO: replace this with 2-3 sentences in your own words.
+						  Who you are, what you're studying, what you want to build.
+						-->
+					My name is Liban and I am currently a student at George Brown studying Computer Programming.
+          My goal is to learn the skills given in this program to use this technology and create simple and
+          efficient records in healthcare, as well as make a video game as a side project.
+           
+					</span>
+				</li>
+
+				<li>
+					<strong class="title">Last Updated</strong>
+					<!--
+					  TODO: replace the whole line below with today's date, written
+					  as a <time> element. Copy this and change both dates to today:
+
+					      <span class="cont"><time datetime="2026-09-20">20 September 2026</time></span>
+
+					  The datetime attribute is the machine-readable form and must be
+					  YYYY-MM-DD. The text between the tags is what people read, and
+					  you can write that however you like.
+
+					  Update it every time you upload a change. It is how you prove to
+					  yourself that the upload worked.
+					-->
+					<span class="cont" id="last-updated">Not yet updated</span>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class="profile-footer">
+		<!--
+		  TODO: your social links. These are optional.
+		  Point each one at YOUR profile, not the platform's home page.
+		  DELETE any list item you don't use — do not leave links that do not
+		  work. Deleting all of them is fine; do not create an account just to
+		  fill this in.
+		  Every link needs an aria-label, because the icon alone tells a
+		  screen reader nothing.
+		-->
+		<ul class="social">
+			<li>
+				<a class="ripple-centered" href="https://github.com/Liban000"
+				   target="_blank" rel="noopener" aria-label="GitHub profile">
+					<i class="fa-brands fa-github" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				
+
+
+<!-- ==========================================================================
+     TODO: COURSE VALIDATION SCRIPT
+     Every HTML file you upload to GBLearn needs this line.
+
+     Right now it is switched off, because it is wrapped in an HTML comment.
+     A comment is a note for people reading the file. The browser ignores
+     everything inside one, so the script never runs.
+
+     A comment opens with four characters — a less-than sign, an exclamation
+     mark, then two hyphens — and closes with two hyphens and a greater-than
+     sign. Everything you are reading now sits inside one.
+     Lab 2 shows you exactly what those markers look like.
+
+     To switch the script on, delete the opening marker from the start of the
+     line below and the closing marker from its end, so that only the script
+     tag is left.
+     ========================================================================== -->
+
+<script src="https://my.gblearn.com/js/loadscript.js"></script> 
+
+
+<!-- ==========================================================================
+     SELF-CHECK PANEL — course file, do not delete.
+     Lives in assets/js/ so this page stays readable. It draws the checklist in
+     the corner of the page and carries its own styling.
+     ========================================================================== -->
+<script src="assets/js/selfcheck.js"></script>
+
+</body>
+</html>
